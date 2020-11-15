@@ -1,20 +1,35 @@
 const hinta = require('./harj5');
 
-test('syötteet ei numeromaisia merkkijonoja "Minna"+"Jaakko", heittää poikkeuksen', () => {
+test('kokeillaan olla antamatta parametrejä', () => {
     expect(() => {hinta()}).toThrow('nolla parametriä annettu');
 });
-
-test ('Testaa hinnalla 101', () => {
-    expect(hinta(101)).toBe(95.94999999999999);
+test('kokeillaan tekstillä', () => {
+    expect(() => {hinta("Moi","Huomenta")}).toThrow('Parametri ei ole lukuja');
 });
-test ('Testaa hinnalla 202', () => {
+test('Kokeillaan syöttää negatiivinen hinta', () => {
+    expect(() => {hinta(-50)}).toThrow('Hinta ei voi olla negatiivinen');
+});
+test ('Testataan hinnalla 0', () => {
+    expect(() => {hinta(0)}).toThrow('Hinta ei voi olla nolla');
+});
+test ('Testataan hinnalla 50', () => {
+    expect(hinta(50)).toBe(50);
+});
+test ('Testataan hinnalla 100', () => {
+    expect(hinta(100)).toBe(95);
+});
+test ('Testataan hinnalla 101', () => {
+    expect(hinta(101)).toBe(95.95);
+});
+test ('Testataan hinnalla 200', () => {
+    expect(hinta(200)).toBe(190);
+});
+test ('Testataan hinnalla 202', () => {
     expect(hinta(202)).toBe(181.8);
 });
-
-test ('Testaa hinnalla 500', () => {
+test ('Testataan hinnalla 500', () => {
     expect(hinta(500)).toBe(425);
 });
-
-test ('Testaa hinnalla 502', () => {
+test ('Testataan hinnalla 502', () => {
     expect(hinta(502)).toBe(426.7);
 });
