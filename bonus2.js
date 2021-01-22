@@ -8,6 +8,7 @@ function contacts(contact){
         throw new Error('tyhja');
     }
     if(contact.phoneNumber === undefined || contact.phoneNumber === null || contact.phoneNumber === ""){
+        contact.phoneNumber = "";
         return contact;
     }
     else { 
@@ -15,7 +16,8 @@ function contacts(contact){
                 return contact;
             }
             else {
-                return false;
+                contact.phoneNumber = "";
+                return contact;
             }
     }  
 

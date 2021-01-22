@@ -1,4 +1,8 @@
 function contacts(contact){
+    
+    if(contact === undefined || contact === null){
+        throw new Error('muuttuja puuttuu');
+    }
     var regExp = /^\(?([0-9]{3})\)?[-]?([0-9]{3})[ ]?([0-9]{4})$/;
     var phone = contact.phoneNumber.match(regExp);
     if(contact.firstname === undefined || contact.firstname === null || contact.firstname === ""){
@@ -15,7 +19,8 @@ function contacts(contact){
                 return '<li>' + contact.firstname + " " +contact.lastname + " " + contact.phoneNumber +'</li>';
             }
             else {
-                return false;
+                contact.phoneNumber = "";
+                return '<li>' + contact.firstname + " " +contact.lastname + " " + contact.phoneNumber +'</li>';                           
             }
     }  
     

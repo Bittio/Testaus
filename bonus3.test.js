@@ -9,6 +9,11 @@ test('Tarkistaa etunimi tyhjänä', () => {
     expect(() => {
     contacts(contact)}).toThrow('tyhja');
 });
+test('Tarkistaa ilman muuttujaa', () => {
+    var contact = {firstname:"", lastname:"langi", phoneNumber:"055-555 5555"};
+    expect(() => {
+    contacts()}).toThrow('muuttuja puuttuu');
+});
 test('Tarkistaa sukunimi tyhjänä', () => {
     var contact = {firstname:"teo", lastname:"", phoneNumber:"055-555 5555"};
     expect(() => {
@@ -28,5 +33,5 @@ test('Tarkistaa toisella oikeilla tiedoilla', () => {
 });
 test('Tarkistaa väärällä tiedoilla', () => {
     var contact = {firstname:"teo", lastname:"langi", phoneNumber:"555-555-5555"};
-    expect(contacts(contact)).toBe(false);
+    expect(contacts(contact)).toBe('<li>teo langi </li>');
 });
