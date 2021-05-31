@@ -367,7 +367,7 @@
     "wrappy": "^1.0.2",
     "wrap-ansi": "^6.2.0",
     "write-file-atomic": "^3.0.3",
-    "ws": "^7.4.2",
+    "ws": "^7.4.6",
     "xml-name-validator": "^3.0.0",
     "xmlchars": "^2.2.0",
     "yallist": "^4.0.0",
