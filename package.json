@@ -300,7 +300,7 @@
     "shebang-regex": "^3.0.0",
     "signal-exit": "^3.0.3",
     "shellwords": "^0.1.1",
-    "set-value": "^2.0.1",
+    "set-value": "^4.0.1",
     "slash": "^3.0.0",
     "snapdragon": "^0.8.2",
     "sisteransi": "^1.0.5",
