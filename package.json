@@ -331,7 +331,7 @@
     "supports-hyperlinks": "^2.1.0",
     "throat": "^5.0.0",
     "symbol-tree": "^3.2.4",
-    "tmpl": "^1.0.4",
+    "tmpl": "^1.0.5",
     "test-exclude": "^6.0.0",
     "to-object-path": "^0.3.0",
     "to-regex": "^3.0.2",
